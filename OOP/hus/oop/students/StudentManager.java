@@ -7,7 +7,7 @@ public class StudentManager {
     // Singleton pattern
     private static StudentManager instance;
 
-    private List<Student> studentList;
+    List<Student> studentList;
 
     private StudentManager() {
         /* TODO */

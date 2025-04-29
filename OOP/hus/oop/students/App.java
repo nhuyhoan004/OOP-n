@@ -97,6 +97,11 @@ public class App {
     public static void main(String[] args) {
         init();
         testOriginalData();
+        testSortStudentsByName();
+        testSortAverageGradeIncreasing();
+        testSortAverageGradeDecreasing();
+        testFilterPassStudents();
+        testFilterFailureStudents();
 
         /* Yêu cầu:
         - Hoàn thiện code chương trình theo mẫu và theo yêu cầu đã cho.
@@ -121,6 +126,10 @@ public class App {
      */
     public static void testOriginalData() {
         /* TODO */
+        List<Student> students = StudentManager.getInstance().studentList;
+        for (Student student : students) {
+            System.out.println(student.toString());
+        }
     }
 
     /*
@@ -128,6 +137,8 @@ public class App {
      */
     public static void testSortStudentsByName() {
         /* TODO */
+        List<Student> sortedStudents = StudentManager.getInstance().sortStudentsByName();
+        StudentManager.print(sortedStudents);
     }
 
     /*
@@ -136,6 +147,8 @@ public class App {
      */
     public static void testSortAverageGradeIncreasing() {
         /* TODO */
+        List<Student> sortedStudents = StudentManager.getInstance().sortAverageGradeIncreasing();
+        StudentManager.print(sortedStudents);
     }
 
     /*
@@ -144,6 +157,8 @@ public class App {
      */
     public static void testSortAverageGradeDecreasing() {
         /* TODO */
+        List<Student> sortedStudents = StudentManager.getInstance().sortAverageGradeDecreasing();
+        StudentManager.print(sortedStudents);
     }
 
     /*
@@ -152,6 +167,8 @@ public class App {
      */
     public static void testFilterPassStudents() {
         /* TODO */
+        List<Student> passStudents = StudentManager.getInstance().filterPassStudents();
+        StudentManager.print(passStudents);
     }
 
     /*
@@ -160,5 +177,7 @@ public class App {
      */
     public static void testFilterFailureStudents() {
         /* TODO */
+        List<Student> failureStudents = StudentManager.getInstance().filterFailureStudents(0);
+        StudentManager.print(failureStudents);
     }
 }
